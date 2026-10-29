@@ -2,7 +2,7 @@ Assignment 3 readme File
 
 ------------------------------------------------------------------------
 What is your name?
-
+Lisa Ochieng
 
 
 ------------------------------------------------------------------------
@@ -11,6 +11,10 @@ assignment? COPY THE LIST of authorized sources of information given
 in the "Policies" web page (also available on armlab in the file
 ~cos217/AuthorizedSourcesList ) to this section of the readme file,
 and edit it as appropriate.
+COS 217 lecture materials.
+COS 217 precept materials.
+COS 217 website.
+COS 217 textbooks.
 
 
 
@@ -25,7 +29,7 @@ may trigger a course penalty, and depending on the nature of the
 interaction, may additionally require the interaction being reported
 to the Committee on Discipline. Write "None" if you used no
 unauthorized sources of information.
-
+None
 
 
 ------------------------------------------------------------------------
@@ -35,7 +39,7 @@ enter your name in the space below the following affirmation:
 
 This paper represents my own work in accordance with University
 regulations.
-
+Lisa Ochieng
 
 
 ------------------------------------------------------------------------
@@ -43,13 +47,13 @@ In fulfillment of the requirement from section 2.4.6 of the Academic
 Regulations in Princeton's Rights, Rules, Responsibilities guide,
 and the COS 217 Generative AI policy, disclose and describe how you
 used AI in completing this assignment:
-
+I did not use AI in this assignment
 
 
 ------------------------------------------------------------------------
 What is your assessment of the assignment? Was it helpful? Was it fun?
 
-
+It was really hard, but I learned a lot about memory management
 
 ------------------------------------------------------------------------
 (optional) What information can you provide about your submission that
@@ -65,14 +69,22 @@ disagreement after each warning. If there are no warnings, then write
 "None."
 
 
-
+I ignored the warnings about buffer overflow
 ------------------------------------------------------------------------
 What warnings does critTer generate on symtablelist.c, and what are your
 disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
+ symtablelist.c: line 75: medium priority:
+   Do you want to validate 'pvValue' through an assert?
 
+   symtablelist.c: line 117: medium priority:
+   Do you want to validate 'pvValue' through an assert?
 
+   symtablelist.c: line 214: medium priority:
+   Do you want to validate 'pvExtra' through an assert?
+I disagree because it is okay for a client to store a NULL value in the
+symbol table.
 
 ------------------------------------------------------------------------
 What warnings does splint generate on symtablehash.c, and what are your
@@ -80,7 +92,7 @@ disagreements with them? Copy the splint warnings here, and express your
 disagreement after each warning. If there are no warnings, then write
 "None."
 
-
+I ignored the warnings regarding buffer overflow
 
 ------------------------------------------------------------------------
 What warnings does critTer generate on symtablehash.c, and what are your
@@ -89,7 +101,17 @@ your disagreement after each warning. If there are no warnings, then
 write "None."
 
 
+ symtablehash.c: line 158: medium priority:
+   Do you want to validate 'pvValue' through an assert?
 
+   symtablehash.c: line 240: medium priority:
+   Do you want to validate 'pvValue' through an assert?
+
+   symtablehash.c: line 299: medium priority:
+   Do you want to validate 'pvExtra' through an assert?
+
+I disagree because a client here is allowed to store null values in
+the symbol table.
 ------------------------------------------------------------------------
 What are the CPU times reported by testsymtable.c with binding counts
 50, 500, 5000, 50000, and 500000 using (1) your linked list
@@ -97,22 +119,22 @@ implementation, (2) your non-expanding hash table implementation, and
 (3) your expanding hash table implementation? Fill in the blanks.
 
 The linked list implementation with:
--- 50 bindings consumed ________ seconds.
--- 500 bindings consumed ________ seconds.
--- 5000 bindings consumed ________ seconds.
--- 50000 bindings consumed ________ seconds.
--- 500000 bindings consumed ________ seconds.
+-- 50 bindings consumed 0.000000 seconds.
+-- 500 bindings consumed 0.000000 seconds.
+-- 5000 bindings consumed 0.133533 seconds.
+-- 50000 bindings consumed 19.551439 seconds.
+-- 500000 bindings consumed Killed seconds.
 
 The non-expanding hash table implementation with:
--- 50 bindings consumed ________ seconds.
--- 500 bindings consumed ________ seconds.
--- 5000 bindings consumed ________ seconds.
--- 50000 bindings consumed ________ seconds.
--- 500000 bindings consumed ________ seconds.
+-- 50 bindings consumed 0.000000 seconds.
+-- 500 bindings consumed 0.000000 seconds.
+-- 5000 bindings consumed 0.000860 seconds.
+-- 50000 bindings consumed 0.037914 seconds.
+-- 500000 bindings consumed 0.428804 seconds.
 
 The expanding hash table implementation with:
--- 50 bindings consumed ________ seconds.
--- 500 bindings consumed ________ seconds.
--- 5000 bindings consumed ________ seconds.
--- 50000 bindings consumed ________ seconds.
--- 500000 bindings consumed ________ seconds.
+-- 50 bindings consumed 0.000000 seconds.
+-- 500 bindings consumed 0.000000 seconds.
+-- 5000 bindings consumed 0.000000 seconds.
+-- 50000 bindings consumed 0.035902 seconds.
+-- 500000 bindings consumed 0.419583 seconds.
